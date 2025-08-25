@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+
+        .menyknapp {
+            position: fixed;
+            top: 80px; /*Kan endres utifra topbar*/
+            left: 10px;
+            background: #0747a6; /*Endre farge til gråish?*/
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 2;
+            border-radius: 4px;
+        }
+        .venstremeny {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 100%;
+            background: #0747a6;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .ikon, .menyvalg {
+            font-size: 44px;
+            text-align: center;
+            padding: 40px 0;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .ikon.aktiv {
+            background: #2684ff
+        }
+
+        #toggle:checked ~ .venstremeny {
+            transform: translateX(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toggle" hidden>
+    <label for="toggle" class="menyknapp">☰</label>
+
+    <nav class="venstremeny">
+        <div class="ikon aktiv"></div>
+        <div class="menyvalg">📄</div>
+        <div class="menyvalg">❞</div>
+        <div class="menyvalg">🔗</div>
+    </nav>
+
+</body>
+</html>
