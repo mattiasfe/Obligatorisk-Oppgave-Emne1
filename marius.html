@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-       
-
-        .menyknapp {
-            position: fixed;
-            top: 80px; /*Kan endres utifra topbar*/
-            left: 10px;
-            background: #0747a6; /*Endre farge til gråish?*/
-            color: white;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            z-index: 2;
-            border-radius: 4px;
-        }
-        .venstremeny {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 150px;
-            height: 100%;
-            background: #0747a6;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 60px;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            z-index: 1;
-        }
-
-        .ikon, .menyvalg {
-            font-size: 44px;
-            text-align: center;
-            padding: 40px 0;
-            width: 100%;
-            cursor: pointer;
-        }
-
-        .ikon.aktiv {
-            background: #2684ff
-        }
-
-        #toggle:checked ~ .venstremeny {
-            transform: translateX(0);
-        }
-
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="topBlueBar.css">
+        
+        
+    </head>
 <body>
+    <form class="topBar-container">
+        <div class="start-bar">
+            <img src="logo.png"  alt="Confluence Logo">
+            <label id="headerId">Confluence</label>
+            <select>
+                <option value="Spaces">Spaces</option>
+                <option value="eksempel2">eksempel1</option>
+                <option value="eksempel3">eksempel2</option>
+            </select>
+            <button>People</button>
+            <div class="borderButton">
+                <button>Create</button>
+            </div>
+        </div>
+            <div class="end-bar">
+                <div class="search-container">
+                    <input type="search" placeholder="Search" id="searchInput" style="height: 40px;">
+                    <img src="search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="search">
+                </div>
+                <button><img src="help_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+                <button><img src="settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+                <button><img src="notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+                <button><img src="account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+            </div>
+       
+    </form>
+    <div class="breadCrums">
+        <div class="start-breadCrums">
+            <a href="#">Pages</a>/
+            <a href="#">sample space</a>/
+            <a href="#">Engineering news</a>
+        </div>
+        <div class="end-breadCrums">
+            <button style="color: black;">Edit</button>
+            <button style="color: black;">Save for later</button>
+            <button style="color: black;">Watching</button>
+            <button style="color: black;">Share</button>
+            <button style="color: black;">•••</button>
+        </div>
 
-    <input type="checkbox" id="toggle" hidden>
-    <label for="toggle" class="menyknapp">☰</label>
+    </div>
 
-    <nav class="venstremeny">
+    <div class="leftMenu">
         <div class="ikon aktiv"></div>
         <div class="menyvalg">📄</div>
         <div class="menyvalg">❞</div>
         <div class="menyvalg">🔗</div>
+    </div>
+
+
+    <div class="rightPhoneMenu">
+        <label for="toggle" class="menyknapp">☰</label>
+
+
+    <input type="checkbox" id="toggle" hidden>
+    <nav class="rightmeny">
+        <div>
+            <div>
+                <input type="search" placeholder="Search" id="searchInput">
+                <img src="search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="search">  
+            </div>
+            <select>
+                <option value="Spaces">Spaces</option>
+                <option value="eksempel2">eksempel1</option>
+                <option value="eksempel3">eksempel2</option>
+            </select>
+        </div>
+        <div>
+            <button>People</button>
+        </div>
+        <div>
+            <button>Create</button>
+            
+        </div>
     </nav>
 
 </body>
