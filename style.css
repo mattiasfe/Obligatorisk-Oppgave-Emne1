@@ -77,15 +77,19 @@ input {
     display: grid;
     background: none;
     grid-template-columns: 1, 1, 1;
+    row-gap: 2px;
+    column-gap: 50px;
     position: absolute;
-    left: 90px;;
-    width: 150%;
+    left: 70px;;
+    width: 100%;
     z-index: -1;
-    padding-top: 4%;
+    padding-top: 2%;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .mainContent img{
     filter: brightness(0);
-    width: 20px;
+    width: 20px;;
     height: auto;
 }
 .start-breadcrums {
@@ -246,6 +250,11 @@ button:hover {
 }
 @media (max-width: 600px) {
     .search-container img {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .search-container {
         display: none;
     }
 }
