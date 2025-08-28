@@ -76,14 +76,13 @@ input {
 .mainContent {
     display: grid;
     background: none;
-    grid-template-columns: 1, 1, 1;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr; 
     row-gap: 2px;
     column-gap: 50px;
-    position: absolute;
-    left: 70px;;
+    position: relative;
     width: 100%;
     z-index: -1;
-    padding-top: 2%;
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -91,6 +90,27 @@ input {
     filter: brightness(0);
     width: 20px;;
     height: auto;
+} 
+.mainContent .svgContainer {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: center;
+    padding-inline-end: 8rem;
+    padding-block-start: 5rem;
+}
+.mainContent .leftMenu {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    justify-self: start;
+    align-self: start;
+}
+.mainContent .textContainer {
+    grid-column: 2 / 1;
+    grid-row: 1 / 1;
+    padding-inline-start: 7rem;
+    justify-self: start;
+    align-self: center;
 }
 .start-breadcrums {
     display: flex;
@@ -206,7 +226,26 @@ button:hover {
     transform: translateX(0);
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 810px) {
+    /* Her legger du til CSS-regler som kun gjelder under 810px */
+    body {
+      font-size: 14px;
+    }
+    
+    .container {
+      width: 100%;
+      min-width: 100%;
+      padding: 0 15px;
+    }
+    .mainContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-width: 100%;
+        width: 100%;
+    }
+  }
+
+@media screen and (max-width: 480px) {
     .topBar-container select,
     .topBar-container  button:not(.menyknapp), 
     #searchInput {
@@ -248,24 +287,42 @@ button:hover {
         z-index: 9999;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .search-container img {
         display: none;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .search-container {
         display: none;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .leftMenu {
         display: none;
     }
 }
- @media (max-width: 600px) {
+ @media (max-width: 480px) {
     .breadCrums  {
         display: none;
         
     }
 } 
+@media (max-width: 480px) {
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        padding: 20px;
+        row-gap: 20px;
+        width: 100%;
+    }
+    .mainContent .svgContainer {
+        padding-inline-end: 0;
+        padding-block-start: 0;
+    }
+    .mainContent .textContainer {
+        padding-inline-start: 0;
+    }
+}
