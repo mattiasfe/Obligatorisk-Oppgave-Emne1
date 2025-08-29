@@ -17,7 +17,6 @@ html, body {
     stroke-width: 0.05;
     stroke: var(--lighttext-color);
 }
-
 .topBar-container {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -49,7 +48,11 @@ html, body {
     padding: 3px;
     
 }
+<<<<<<< Updated upstream
 button {
+=======
+button{
+>>>>>>> Stashed changes
     border: none;
     color: var(--lighttext-color);
     background: none;
@@ -58,6 +61,7 @@ button {
     cursor: pointer;
     
 }
+
 input {
     height: 80px;
 }
@@ -172,7 +176,7 @@ img {
     top: 30%;
     transform: translateY(-50%);
 }
-button:hover :not(.breadCrums img) {
+button:hover {
     background-color: #0052cc;
     transform: scale(1.2) ;
 }
@@ -300,6 +304,7 @@ button:hover :not(.breadCrums img) {
         cursor: pointer;
         z-index: 9999;
     }
+    
 }
 @media (max-width: 550px) {
     .search-container img {
