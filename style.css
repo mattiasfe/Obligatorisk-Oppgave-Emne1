@@ -18,9 +18,16 @@ ul {
     grid-template-rows: 1fr 1fr ;
 }
 
-ul button {
-    grid-template-rows: 2 / 1;
-    grid-template-columns: 2 / 1;
+.agenda-button {
+    border: solid 2px var(--lighttext-color);
+
+    width: 30%;
+    font-size: small;
+    margin-block-start: 1rem;
+    margin-inline-start: 1rem;
+}
+.agenda-button:hover {
+
 }
 .diagramInfo {
     color: var(--lighttext-color);
@@ -213,7 +220,7 @@ button:hover :not(.breadCrums img) {
     z-index: 20;
 }
 
-.leftMenu {
+.leftMenu:not(.ikon) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
