@@ -12,6 +12,16 @@ html, body {
     margin: 0;
     padding: 0;
 }
+ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+
+ul button {
+    grid-template-rows: 2 / 1;
+    grid-template-columns: 2 / 1;
+}
 .diagramInfo {
     color: var(--lighttext-color);
     stroke-width: 0.05;
@@ -72,6 +82,7 @@ input {
     width: 100%;
     z-index: 1;
     padding-top: 1%;
+    padding-block-end: 1rem;
     z-index: 0;
 }
  .breadCrums img  {
