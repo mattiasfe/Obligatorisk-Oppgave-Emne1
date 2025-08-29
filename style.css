@@ -12,7 +12,11 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+.diagramInfo {
+    color: var(--lighttext-color);
+    stroke-width: 0.05;
+    stroke: var(--lighttext-color);
+}
 
 .topBar-container {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -162,7 +166,7 @@ img {
     top: 30%;
     transform: translateY(-50%);
 }
-button:hover {
+button:hover :not(.breadCrums img) {
     background-color: #0052cc;
     transform: scale(1.2) ;
 }
