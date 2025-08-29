@@ -41,6 +41,7 @@ html, body {
 #headerId {
     font-size: x-large;
     padding-right: 10px; 
+    color: var(--text-color);
 }
 .borderButton {
     background-color: var(--light-blue);
@@ -48,9 +49,9 @@ html, body {
     padding: 3px;
     
 }
-button  {
+button {
     border: none;
-    color: var(--text-color);
+    color: var(--lighttext-color);
     background: none;
     font-size: var(--text-Size);
     padding-top: 1%;
@@ -65,28 +66,32 @@ input {
     background: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr, 1fr, 1fr; 
-    position: absolute;
+    position: relative;
+    color: var(--lighttext-color);
     left: 7rem;
     width: 100%;
     z-index: 1;
     padding-top: 1%;
-    
+    z-index: 0;
 }
  .breadCrums img  {
     filter: brightness(0);
     width: 20px;
     height: auto;
+    background: none;
+    position: relative;
     
+    z-index: -4;
 }
 .start-breadcrums {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    position: absolute;
+    position: relative;
     gap: 1.5rem;
     padding-left: 80px;
-
-    
+    background: none;
+    z-index: 0;
 }
 .end-breadcrums {
     display: grid;
@@ -98,8 +103,8 @@ input {
 .mainContent {
     display: grid;
     background: none;
-    grid-template-columns: 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr; 
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr; 
     row-gap: 2px;
     column-gap: 50px;
     position: relative;
@@ -110,8 +115,9 @@ input {
 }
 .mainContent img{
     filter: brightness(0);
-    width: 20px;;
-    height: auto;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
 } 
 .mainContent .svgContainer {
     grid-column: 2 / 2;
@@ -130,9 +136,10 @@ input {
 .mainContent .textContainer {
     grid-column: 2 / 1;
     grid-row: 1 / 1;
-    padding-inline-start: 7rem;
+    padding-inline-start: 5rem;
     justify-self: start;
     align-self: center;
+    min-width: 100%;
 }
 select {
     color: var(--text-color);
@@ -150,9 +157,8 @@ select {
     position: relative;
 }
 img {
-    height: 30px;
-    width: auto;
-    padding-right: 30px;
+
+    padding-inline-end: 2rem;
 }
 .search-container input {
     padding-left: 30px;
@@ -175,14 +181,12 @@ button:hover :not(.breadCrums img) {
     align-items: center;
     gap: 1.5rem;
 }
-.start-bar {
+.start-bar button{
     justify-content: flex-start;
     color: var(--text-color);
 }
 .end-bar img{
-    justify-content: flex-end;
-    margin-right: 20px;
-    
+    padding-inline-end:3rem;
 }
 .rightPhoneMenu {
     display: none;

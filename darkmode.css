@@ -1,6 +1,7 @@
 :root {
     --bg-color: white;
     --lighttext-color: black;
+    --icon-brigh
   }
 
   /* Skjul checkbox */
@@ -16,7 +17,7 @@
   .page {
     background: var(--bg-color);
     color: var(--lighttext-color);
-    border-radius: 8px;
+    border: none;
   }
 
 
@@ -49,6 +50,7 @@
   #darkmode-toggle:checked ~ .page {
     --bg-color: #222;
     --lighttext-color: #eee;
+    
   }
 
   /* Toggle farger når checked */
