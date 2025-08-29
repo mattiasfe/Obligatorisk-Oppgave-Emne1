@@ -19,9 +19,7 @@
     border-radius: 8px;
   }
 
-  h1 {
-    margin-top: 0;
-  }
+
 
   /* Toggle-knappen */
   .toggle {
@@ -30,7 +28,7 @@
     height: 26px;
     background: #000000;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
     transition: background 0.3s;
   }
