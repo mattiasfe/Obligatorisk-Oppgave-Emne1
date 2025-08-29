@@ -11,7 +11,7 @@
 
   body {
     transition: background 0.3s, color 0.3s;
-    
+
   }
 
   .page {
@@ -46,11 +46,11 @@
     transition: transform 0.3s;
   }
 
-  /* Dark mode variabler når toggle er på */
+  / Dark mode variabler når toggle er på /
   #darkmode-toggle:checked ~ .page {
     --bg-color: #222;
     --lighttext-color: #eee;
-    
+
   }
 
   /* Toggle farger når checked */
