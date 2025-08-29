@@ -245,7 +245,7 @@ button:hover {
     }
   }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
     .topBar-container select,
     .topBar-container  button:not(.menyknapp), 
     #searchInput {
@@ -287,28 +287,28 @@ button:hover {
         z-index: 9999;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .search-container img {
         display: none;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .search-container {
         display: none;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .leftMenu {
         display: none;
     }
 }
- @media (max-width: 480px) {
+ @media (max-width: 550px) {
     .breadCrums  {
         display: none;
         
     }
 } 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .mainContent {
         display: flex;
         flex-direction: column;
